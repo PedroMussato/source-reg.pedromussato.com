@@ -1,0 +1,14 @@
+# Apache: send everything that is not a real file to the front controller.
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Never serve dotfiles from public/.
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>

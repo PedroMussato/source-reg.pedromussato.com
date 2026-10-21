@@ -1,0 +1,17 @@
+{
+    "name": "local/git-markdown-wiki",
+    "description": "Read-only, Git-backed Markdown wiki (PHP, vanilla JS, no database)",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "league/commonmark": "^2.5",
+        "ezyang/htmlpurifier": "^4.17"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}
